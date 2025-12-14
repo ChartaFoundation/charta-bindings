@@ -1,0 +1,37 @@
+[package]
+name = "charta"
+version = "0.1.0"
+edition = "2021"
+description = "Rust SDK for embedding Charta VM in applications"
+authors = ["Charta Foundation"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/chartafoundation/charta-bindings"
+homepage = "https://charta.dev"
+documentation = "https://docs.charta.dev/rust"
+
+[dependencies]
+charta-vm = { path = "../../charta-vm" }
+charta-core = { path = "../../charta-core" }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[[example]]
+name = "basic"
+path = "examples/basic.rs"
+
+[[example]]
+name = "callbacks"
+path = "examples/callbacks.rs"
+
+[[example]]
+name = "governance"
+path = "examples/governance.rs"
+
+[[example]]
+name = "multiple_cycles"
+path = "examples/multiple_cycles.rs"
